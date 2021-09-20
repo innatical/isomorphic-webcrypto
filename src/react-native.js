@@ -37,7 +37,7 @@ global.atob = typeof atob === 'undefined' ? b64.atob : atob;
 global.btoa = typeof btoa === 'undefined' ? b64.btoa : btoa;
 global.msrCryptoPermanentForceSync = true;
 
-const crypto = require('msrcrypto');
+const crypto = require('./msrcrypto');
 
 let isSecured = false;
 const secured = new Promise((resolve, reject) => {
