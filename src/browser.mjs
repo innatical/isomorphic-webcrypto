@@ -1,2 +1,3 @@
-import './webcrypto-shim.mjs'
-export default window.crypto
+import "./webcrypto-shim.mjs";
+import "./webcrypto-liner.mjs";
+export default window.crypto;
