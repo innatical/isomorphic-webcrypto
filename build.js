@@ -69,7 +69,7 @@ linerContents = linerContents.replace(
   `exports.crypto = new Crypto$1(); ${notice}`
 );
 
-const mjs = linerContents;
+let mjs = linerContents;
 mjs += `\n export default {} ${notice} \n`;
 fs.writeFileSync(
   path.join(__dirname, "src", "webcrypto-liner.mjs"),
