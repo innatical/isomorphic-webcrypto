@@ -1,5 +1,5 @@
 require("webcrypto-shim");
-require("./webcrypto-liner");
+require("webcrypto-liner");
 var b64u = require("b64u-lite/bundle/b64u-lite");
 var str2buf = require("str2buf");
 
