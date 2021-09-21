@@ -1,4 +1,6 @@
 require("webcrypto-shim");
+var elliptic = require("elliptic");
+window["elliptic"] = elliptic;
 require("webcrypto-liner");
 var b64u = require("b64u-lite/bundle/b64u-lite");
 var str2buf = require("str2buf");
