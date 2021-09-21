@@ -71,10 +71,7 @@ linerContents = linerContents.replace(
 
 let mjs = linerContents;
 mjs += `\n export default {} ${notice} \n`;
-fs.writeFileSync(
-  path.join(__dirname, "src", "webcrypto-liner.mjs"),
-  linerContents
-);
+fs.writeFileSync(path.join(__dirname, "src", "webcrypto-liner.mjs"), mjs);
 
 linerContents += `\n module.exports = liner; ${notice} \n`;
 fs.writeFileSync(
