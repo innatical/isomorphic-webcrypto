@@ -68,14 +68,16 @@ linerContents = linerContents.replace(
 `,
   `exports.crypto = new Crypto$1(); ${notice}`
 );
-linerContents += `\n module.exports = liner; ${notice} \n`;
+
+const mjs = linerContents;
+mjs += `\n export default {} ${notice} \n`;
 fs.writeFileSync(
-  path.join(__dirname, "src", "webcrypto-liner.js"),
+  path.join(__dirname, "src", "webcrypto-liner.mjs"),
   linerContents
 );
 
-linerContents += `\n export default {} ${notice} \n`;
+linerContents += `\n module.exports = liner; ${notice} \n`;
 fs.writeFileSync(
-  path.join(__dirname, "src", "webcrypto-liner.mjs"),
+  path.join(__dirname, "src", "webcrypto-liner.js"),
   linerContents
 );
