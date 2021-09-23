@@ -1,5 +1,4 @@
 import "./webcrypto-shim.mjs";
-import * as elliptic from "elliptic";
-window["elliptic"] = elliptic;
+import "./elliptic.mjs";
 import "webcrypto-liner";
 export default window.crypto;
