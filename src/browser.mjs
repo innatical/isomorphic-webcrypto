@@ -1,4 +1,6 @@
 import "./webcrypto-shim.mjs";
 import "./elliptic.mjs";
-import "webcrypto-liner";
+import { crypto } from "webcrypto-liner";
+delete window.crypto;
+window.crypto = crypto;
 export default window.crypto;

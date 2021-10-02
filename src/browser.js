@@ -1,7 +1,9 @@
 require("webcrypto-shim");
 var elliptic = require("elliptic");
 window["elliptic"] = elliptic;
-require("webcrypto-liner");
+var crypto = require("webcrypto-liner");
+delete window.crypto;
+window.crypto = crypto;
 var b64u = require("b64u-lite/bundle/b64u-lite");
 var str2buf = require("str2buf");
 
