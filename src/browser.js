@@ -1,6 +1,8 @@
 require("webcrypto-shim");
 var elliptic = require("elliptic");
 window["elliptic"] = elliptic;
+var Buffer = require("buffer/");
+window.Buffer = Buffer;
 var crypto = require("webcrypto-liner");
 delete window.crypto;
 window.crypto = crypto;
